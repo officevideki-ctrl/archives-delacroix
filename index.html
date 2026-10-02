@@ -203,6 +203,26 @@
   .fiche p{margin:0 0 12px;color:var(--parch-dim);font-size:15px}
   .fiche blockquote{margin:14px 0 0;padding-left:14px;border-left:2px solid var(--gold);font-family:var(--serif);
     font-style:italic;font-size:19px;color:var(--parch);line-height:1.35}
+  /* ---- SOPHIE ET LES STATUES ---- */
+  .stat{display:grid;grid-template-columns:1.15fr 1fr;gap:34px;align-items:center;padding:30px 0;border-top:1px solid var(--line)}
+  .stat:first-of-type{border-top:0}
+  .stat.rev{grid-template-columns:1fr 1.15fr}
+  .stat.rev .frame{order:2}
+  @media(max-width:760px){.stat,.stat.rev{grid-template-columns:1fr;gap:20px}.stat.rev .frame{order:0}}
+  .stat .frame .img{aspect-ratio:auto;display:block;background:none}
+  .stat .frame .img img{width:100%;height:auto}
+  .stat .frame.tall{max-width:420px;justify-self:center;width:100%}
+  .stat .no{font-family:var(--mono);font-size:11px;color:var(--gold-soft);letter-spacing:.14em;text-transform:uppercase}
+  .stat h3{font-size:clamp(26px,3.6vw,34px);color:var(--parch);margin:8px 0 12px;line-height:1.1}
+  .stat p{margin:0 0 12px;color:var(--parch-dim);font-size:15.5px;max-width:52ch}
+  .stat p.geste{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--parch)}
+  .next{margin-top:30px;border:1px dashed var(--gold-soft);border-radius:3px;padding:28px;text-align:center;background:rgba(230,169,74,.04)}
+  .next .mark{font-family:var(--serif);font-size:54px;color:var(--gold);line-height:.8}
+  .next h3{font-size:30px;color:var(--parch);margin:10px 0 8px}
+  .next p{margin:0 auto 6px;color:var(--parch-dim);max-width:54ch;font-size:15px}
+  .next .hash{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:var(--gold);
+    border:1px solid var(--gold);padding:8px 16px;border-radius:2px}
+
   .hist-note{margin:0;max-width:70ch;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--steel);
     border:1px dashed rgba(111,146,180,.45);padding:10px 14px;border-radius:2px}
   .fiche blockquote cite{display:block;font-family:var(--mono);font-style:normal;font-size:10px;color:var(--parch-dim);letter-spacing:.08em;margin-top:6px;text-transform:uppercase}
@@ -228,6 +248,7 @@
       <a href="#bio">Biographie</a>
       <a href="#actions">Ses actions</a>
       <a href="#temoins">Personnages</a>
+      <a href="#statues">Statues</a>
       <a href="#films">Films</a>
       <a href="#galerie">Galerie</a>
       <a href="#disco">Musique</a>
@@ -374,9 +395,62 @@
     </div>
   </section>
 
+  <!-- SOPHIE ET LES STATUES -->
+  <section id="statues" class="alt">
+    <div class="sec-head"><span class="n">04</span><h2>Sophie et les statues</h2><span class="mono">une habitude, une signature</span></div>
+    <p class="lead">Partout où elle passe, il y a une statue. Et chaque fois, Sophie s'arrête — pour en prendre la pose, en sourire, ou en partager la peine.</p>
+
+    <div style="margin-top:20px">
+      <div class="stat">
+        <figure class="frame" style="margin:0"><div class="tape"></div>
+          <div class="img"><img src="images/statue-lenine-moscou.webp" alt="Sophie imite le bras tendu de la statue de Lénine, au Kremlin" loading="lazy" width="1200" height="900"></div>
+          <div class="cap"><span>réf. <b>SD‑ST1</b></span><span>Moscou · Kremlin</span></div></figure>
+        <div>
+          <span class="no">Statue n° 1 · Moscou</span>
+          <h3>Lénine, le bras tendu</h3>
+          <p class="geste">Le bronze montre l'avenir du doigt. Sophie, elle, montre… la même chose, avec un sourire.</p>
+          <p>Au Kremlin, devant la statue du fondateur, elle tend le bras exactement comme lui. Les officiels retiennent leur souffle ; le maître des lieux éclate de rire. C'est la première photographie de la série — celle par laquelle tout a commencé.</p>
+        </div>
+      </div>
+
+      <div class="stat rev">
+        <figure class="frame tall" style="margin:0"><div class="tape"></div>
+          <div class="img"><img src="images/statue-captif-charlottenburg.webp" alt="Sophie, la main sur la joue d'un captif de bronze enchaîné, à Charlottenburg" loading="lazy" width="900" height="1200"></div>
+          <div class="cap"><span>réf. <b>SD‑ST2</b></span><span>Berlin · Charlottenburg</span></div></figure>
+        <div>
+          <span class="no">Statue n° 2 · Berlin‑Ouest</span>
+          <h3>Le captif enchaîné</h3>
+          <p class="geste">Cette fois, elle n'imite pas. Elle console.</p>
+          <p>Au pied du monument du Grand Électeur, des captifs de bronze sont enchaînés depuis trois siècles. Sophie s'agenouille près de l'un d'eux, prend la chaîne dans une main et pose l'autre sur sa joue.</p>
+          <p>Un journaliste y a vu bien plus qu'une consolation : « elle cherche la chaîne, pas l'épaule… une promesse : tiens bon, un jour on t'ouvrira ces fers. »</p>
+        </div>
+      </div>
+
+      <div class="stat">
+        <figure class="frame" style="margin:0"><div class="tape"></div>
+          <div class="img"><img src="images/statue-bernard-chaines.webp" alt="Le reporter Bernard Fontaine pose à son tour la main sur les chaînes du captif de Charlottenburg" loading="lazy" width="960" height="720"></div>
+          <div class="cap"><span>réf. <b>SD‑ST2b</b></span><span>Charlottenburg · le soir</span></div></figure>
+        <div>
+          <span class="no">Et le geste se transmet</span>
+          <h3>Le reporter, à son tour</h3>
+          <p>Quelques jours plus tard, Bernard Fontaine revient au même endroit, micro d'Antenne 2 à la main. Devant les caméras, il pose lui aussi la main sur les chaînes du captif.</p>
+          <p class="geste">Un geste qui se répète cesse d'être un hasard. Il devient un signe.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="next">
+      <div class="mark">?</div>
+      <h3>Où sera la prochaine statue&nbsp;?</h3>
+      <p>Paris, Rome, Prague… Les archives n'ont pas encore livré la suite. Mais une chose est sûre : quelque part, une statue l'attend.</p>
+      <p>Et vous — devant la statue de votre ville, prendriez‑vous la pose&nbsp;?</p>
+      <span class="hash">Fais comme Sophie · #SophiePose</span>
+    </div>
+  </section>
+
   <!-- FILMS & MUSIQUE (embed YouTube) -->
-  <section id="films" class="alt">
-    <div class="sec-head"><span class="n">04</span><h2>Films &amp; musique</h2><span class="mono">reportages · clips</span></div>
+  <section id="films">
+    <div class="sec-head"><span class="n">05</span><h2>Films &amp; musique</h2><span class="mono">reportages · clips</span></div>
     <p class="lead">Les images qu'elle nous a laissées.</p>
     <div class="vids" style="margin-top:26px">
       <figure class="vid"><div class="yt" data-yt="" role="button" tabindex="0" aria-label="Lire la vidéo"><span class="lbl">Berlin · 1982</span><span class="play"></span></div><figcaption>Le soir du Mur<small>reportage — Antenne 2</small></figcaption></figure>
@@ -387,8 +461,8 @@
   </section>
 
   <!-- GALERIE -->
-  <section id="galerie">
-    <div class="sec-head"><span class="n">05</span><h2>Galerie</h2><span class="mono">par lieu · tirages retrouvés</span></div>
+  <section id="galerie" class="alt">
+    <div class="sec-head"><span class="n">06</span><h2>Galerie</h2><span class="mono">par lieu · tirages retrouvés</span></div>
     <div class="gal">
       <div class="frame"><div class="img"><span class="mono-monogram">01</span><span class="place-label">Moscou · Kremlin</span></div><div class="cap"><span>réf. <b>SD‑014</b></span><span>1982</span></div></div>
       <div class="frame"><div class="img"><span class="mono-monogram">02</span><span class="place-label">Berlin · le Mur</span></div><div class="cap"><span>réf. <b>SD‑022</b></span><span>1982</span></div></div>
@@ -401,8 +475,8 @@
   </section>
 
   <!-- DISCOGRAPHIE -->
-  <section id="disco" class="alt">
-    <div class="sec-head"><span class="n">06</span><h2>Sa musique</h2><span class="mono">discographie</span></div>
+  <section id="disco">
+    <div class="sec-head"><span class="n">07</span><h2>Sa musique</h2><span class="mono">discographie</span></div>
     <div class="disco">
       <div class="track"><span class="num">01</span><span class="t">Ballade Lumière</span><span class="meta">1982 · chanson-signature</span><button class="play" type="button">écouter ▸</button></div>
       <div class="track"><span class="num">02</span><span class="t">Je garde la lumière</span><span class="meta">1982</span><button class="play" type="button">écouter ▸</button></div>
@@ -412,8 +486,8 @@
   </section>
 
   <!-- LE MYSTERE -->
-  <section id="mystere">
-    <div class="sec-head"><span class="n">07</span><h2>Le mystère</h2></div>
+  <section id="mystere" class="alt">
+    <div class="sec-head"><span class="n">08</span><h2>Le mystère</h2></div>
     <p class="lead">Cinq questions que personne n'a jamais tranchées.</p>
     <div class="myst" style="margin-top:26px">
       <div class="qcard"><div class="mark">?</div><h3>D'où venait-elle vraiment ?</h3><p>Les papiers se contredisent. Certains jurent qu'elle n'était pas seulement française.</p></div>
@@ -424,8 +498,8 @@
   </section>
 
   <!-- DECOUVERTES -->
-  <section id="feed" class="alt">
-    <div class="sec-head"><span class="n">08</span><h2>Dernières découvertes</h2><span class="mono">mis à jour en continu</span></div>
+  <section id="feed">
+    <div class="sec-head"><span class="n">09</span><h2>Dernières découvertes</h2><span class="mono">mis à jour en continu</span></div>
     <div class="feed">
       <div class="post"><div class="when">28 · 09 · 2026<small>ajout d'archive</small></div>
         <div><h3>Un tirage de Charlottenburg refait surface</h3><p>Une photographie la montre agenouillée près du captif enchaîné, la main sur son épaule. Le monument, lui aussi, avait traversé la ville pour rejoindre l'Ouest… mais ça, c'est une autre histoire.</p><p class="sig">— Le Gardien de la Lumière</p></div></div>
