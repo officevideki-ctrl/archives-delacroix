@@ -185,6 +185,25 @@
     color:var(--gold);font-size:18px;cursor:pointer;display:none;place-items:center;backdrop-filter:blur(6px)}
   .sound.show{display:grid}
   @media(prefers-reduced-motion:reduce){#enter .flame{animation:none}}
+
+  /* ---- PERSONNAGES (fiches de dossier) ---- */
+  .cast{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  @media(max-width:760px){.cast{grid-template-columns:1fr}}
+  .fiche{background:rgba(233,223,201,.03);border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+  .fiche .ph{position:relative;aspect-ratio:4/3;background:#0f1a28}
+  .fiche .ph img{width:100%;height:100%;object-fit:cover}
+  .fiche .ph.duo{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+  .fiche .ph .yr{position:absolute;bottom:10px;background:rgba(12,20,32,.78);color:var(--paper);
+    font-family:var(--mono);font-size:10px;letter-spacing:.1em;padding:3px 7px;text-transform:uppercase}
+  .fiche .ph .tag{position:absolute;top:12px;left:12px;background:rgba(12,20,32,.78);color:var(--gold);
+    font-family:var(--mono);font-size:10px;letter-spacing:.12em;padding:4px 8px;text-transform:uppercase}
+  .fiche .body{padding:20px 22px 22px}
+  .fiche h3{font-size:28px;color:var(--parch);line-height:1.1}
+  .fiche .role{font-family:var(--mono);font-size:11px;color:var(--gold-soft);letter-spacing:.1em;text-transform:uppercase;margin:6px 0 14px}
+  .fiche p{margin:0 0 12px;color:var(--parch-dim);font-size:15px}
+  .fiche blockquote{margin:14px 0 0;padding-left:14px;border-left:2px solid var(--gold);font-family:var(--serif);
+    font-style:italic;font-size:19px;color:var(--parch);line-height:1.35}
+  .fiche blockquote cite{display:block;font-family:var(--mono);font-style:normal;font-size:10px;color:var(--parch-dim);letter-spacing:.08em;margin-top:6px;text-transform:uppercase}
 </style>
 <style>html{-webkit-text-size-adjust:100%}img{max-width:100%;display:block}[hidden]{display:none!important}code{font-family:'Space Mono',monospace;font-size:.85em;color:var(--gold)}</style>
 </head>
@@ -206,6 +225,7 @@
     <nav>
       <a href="#bio">Biographie</a>
       <a href="#actions">Ses actions</a>
+      <a href="#temoins">Personnages</a>
       <a href="#films">Films</a>
       <a href="#galerie">Galerie</a>
       <a href="#disco">Musique</a>
@@ -266,9 +286,67 @@
     </div>
   </section>
 
+  <!-- PERSONNAGES -->
+  <section id="temoins">
+    <div class="sec-head"><span class="n">03</span><h2>Ceux qui l'ont croisée</h2><span class="mono">fiches de dossier</span></div>
+    <p class="lead">Un reporter, une présentatrice, un ministre, un officier. Chacun a vu passer Sophie — et aucun n'en est sorti tout à fait le même.</p>
+    <div class="cast" style="margin-top:28px">
+
+      <article class="fiche">
+        <div class="ph"><img src="images/bernard-fontaine.webp" alt="Bernard Fontaine, micro Antenne 2 en main, à Checkpoint Charlie" loading="lazy" width="960" height="720"><span class="tag">Dossier BF‑01</span></div>
+        <div class="body">
+          <h3>Bernard Fontaine</h3>
+          <p class="role">Envoyé spécial · Antenne 2</p>
+          <p>Longtemps la voix tranquille du journal du soir, il posait déjà les questions que personne n'osait poser. En 1982, la rédaction l'envoie à Berlin : il filme l'arrivée du président américain aux côtés de Sophie, puis reste sur place, de Checkpoint Charlie jusqu'aux captifs enchaînés de Charlottenburg.</p>
+          <p>Le studio l'a perdu ; le terrain l'a gagné. Il ne semble pas pressé de rentrer à Paris.</p>
+          <blockquote>« Les murs finissent toujours par tomber, devant les hommes et les femmes qui refusent d'avoir peur. »<cite>Charlottenburg, 1982</cite></blockquote>
+        </div>
+      </article>
+
+      <article class="fiche">
+        <div class="ph"><img src="images/catherine-vallon.webp" alt="Catherine Vallon au pupitre du studio d'Antenne 2" loading="lazy" width="960" height="720"><span class="tag">Dossier CV‑02</span></div>
+        <div class="body">
+          <h3>Catherine Vallon</h3>
+          <p class="role">Présentatrice · plateau Antenne 2</p>
+          <p>Depuis le studio parisien, c'est elle qui donne l'antenne à Bernard et qui garde le fil quand l'actualité s'emballe. Élégante, précise, faussement sage : un sourcil levé lui suffit pour commenter un communiqué officiel.</p>
+          <p>Le soir où Bernard s'installait face à un mirador est-allemand, c'est elle qui l'a prévenu : « un soldat vous observe à la jumelle ! »</p>
+          <blockquote>« Un mur n'est jamais qu'une chaîne de plus. »<cite>Berlin, au petit matin</cite></blockquote>
+        </div>
+      </article>
+
+      <article class="fiche">
+        <div class="ph"><img src="images/henri-vasseur.webp" alt="Le ministre Henri Vasseur, indigné, devant les micros de la presse" loading="lazy" width="960" height="720"><span class="tag">Dossier HV‑03</span></div>
+        <div class="body">
+          <h3>Henri Vasseur</h3>
+          <p class="role">Ministre de l'Intérieur · République française</p>
+          <p>Le politicien parfait : indigné à la demande, onctueux dans la minute qui suit. C'est lui qui interdit en France la diffusion de l'enregistrement de Moscou, lui qui jure n'avoir donné « aucune autorisation », lui encore qui menace de convoquer… le président des États‑Unis.</p>
+          <p>À chaque nouveau geste de Sophie, il convoque quelqu'un. La liste s'allonge.</p>
+          <blockquote>« La France n'est pas une figurante ! »<cite>Réaction officielle, Paris, 1982</cite></blockquote>
+        </div>
+      </article>
+
+      <article class="fiche">
+        <div class="ph duo">
+          <img src="images/valkov-1979.webp" alt="Sergueï Valkov en uniforme d'officier soviétique, Moscou 1979" loading="lazy" width="960" height="720">
+          <img src="images/valkov-1982.webp" alt="Sergueï Valkov en civil, chantant au micro, 1982" loading="lazy" width="960" height="720">
+          <span class="tag">Dossier SV‑04</span>
+          <span class="yr" style="left:10px">Moscou · 1979</span><span class="yr" style="right:10px">1982 · en civil</span>
+        </div>
+        <div class="body">
+          <h3>Sergueï Valkov</h3>
+          <p class="role">Officier · chanteur · Union soviétique</p>
+          <p>Au concours Intervision de Moscou, en 1979, c'est lui — en uniforme, étoile rouge à la casquette — qui chante en duo avec Sophie. Une voix de ténor que le public n'a pas oubliée.</p>
+          <p>Trois ans plus tard, une dédicace arrive de l'Est : Valkov reprend « Je garde la lumière » en russe. Cette fois, plus d'uniforme, plus aucun insigne. Juste un homme… et une chanson. Qui l'a autorisé ? Personne ne le sait.</p>
+          <blockquote>« Свет в окне » — la lumière à la fenêtre.<cite>Dédicace venue de l'Est, 1982</cite></blockquote>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
   <!-- FILMS & MUSIQUE (embed YouTube) -->
   <section id="films" class="alt">
-    <div class="sec-head"><span class="n">03</span><h2>Films &amp; musique</h2><span class="mono">reportages · clips</span></div>
+    <div class="sec-head"><span class="n">04</span><h2>Films &amp; musique</h2><span class="mono">reportages · clips</span></div>
     <p class="lead">Les images qu'elle nous a laissées.</p>
     <div class="vids" style="margin-top:26px">
       <figure class="vid"><div class="yt" data-yt="" role="button" tabindex="0" aria-label="Lire la vidéo"><span class="lbl">Berlin · 1982</span><span class="play"></span></div><figcaption>Le soir du Mur<small>reportage — Antenne 2</small></figcaption></figure>
@@ -280,7 +358,7 @@
 
   <!-- GALERIE -->
   <section id="galerie">
-    <div class="sec-head"><span class="n">04</span><h2>Galerie</h2><span class="mono">par lieu · tirages retrouvés</span></div>
+    <div class="sec-head"><span class="n">05</span><h2>Galerie</h2><span class="mono">par lieu · tirages retrouvés</span></div>
     <div class="gal">
       <div class="frame"><div class="img"><span class="mono-monogram">01</span><span class="place-label">Moscou · Kremlin</span></div><div class="cap"><span>réf. <b>SD‑014</b></span><span>1982</span></div></div>
       <div class="frame"><div class="img"><span class="mono-monogram">02</span><span class="place-label">Berlin · le Mur</span></div><div class="cap"><span>réf. <b>SD‑022</b></span><span>1982</span></div></div>
@@ -294,7 +372,7 @@
 
   <!-- DISCOGRAPHIE -->
   <section id="disco" class="alt">
-    <div class="sec-head"><span class="n">05</span><h2>Sa musique</h2><span class="mono">discographie</span></div>
+    <div class="sec-head"><span class="n">06</span><h2>Sa musique</h2><span class="mono">discographie</span></div>
     <div class="disco">
       <div class="track"><span class="num">01</span><span class="t">Ballade Lumière</span><span class="meta">1982 · chanson-signature</span><button class="play" type="button">écouter ▸</button></div>
       <div class="track"><span class="num">02</span><span class="t">Je garde la lumière</span><span class="meta">1982</span><button class="play" type="button">écouter ▸</button></div>
@@ -305,7 +383,7 @@
 
   <!-- LE MYSTERE -->
   <section id="mystere">
-    <div class="sec-head"><span class="n">06</span><h2>Le mystère</h2></div>
+    <div class="sec-head"><span class="n">07</span><h2>Le mystère</h2></div>
     <p class="lead">Cinq questions que personne n'a jamais tranchées.</p>
     <div class="myst" style="margin-top:26px">
       <div class="qcard"><div class="mark">?</div><h3>D'où venait-elle vraiment ?</h3><p>Les papiers se contredisent. Certains jurent qu'elle n'était pas seulement française.</p></div>
@@ -317,7 +395,7 @@
 
   <!-- DECOUVERTES -->
   <section id="feed" class="alt">
-    <div class="sec-head"><span class="n">07</span><h2>Dernières découvertes</h2><span class="mono">mis à jour en continu</span></div>
+    <div class="sec-head"><span class="n">08</span><h2>Dernières découvertes</h2><span class="mono">mis à jour en continu</span></div>
     <div class="feed">
       <div class="post"><div class="when">28 · 09 · 2026<small>ajout d'archive</small></div>
         <div><h3>Un tirage de Charlottenburg refait surface</h3><p>Une photographie la montre agenouillée près du captif enchaîné, la main sur son épaule. Le monument, lui aussi, avait traversé la ville pour rejoindre l'Ouest… mais ça, c'est une autre histoire.</p><p class="sig">— Le Gardien de la Lumière</p></div></div>
