@@ -229,6 +229,11 @@
   .frame.g .img{aspect-ratio:3/2}
   .frame.g .img img{width:100%;height:100%;object-fit:cover}
   .frame.g .cap{flex-wrap:wrap}
+  .feature{margin:26px 0 30px;padding:18px;border:1px solid var(--gold-soft);border-radius:3px;background:rgba(230,169,74,.05)}
+  .feature .mono{display:block;margin-bottom:12px}
+  .feature video{width:100%;height:auto;display:block;border-radius:2px;background:#000}
+  .feature figcaption{font-family:var(--serif);font-size:22px;color:var(--parch);margin-top:12px}
+  .feature figcaption small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--parch-dim);letter-spacing:.08em;margin-top:4px;text-transform:uppercase}
   .hist-note{margin:0;max-width:70ch;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--steel);
     border:1px dashed rgba(111,146,180,.45);padding:10px 14px;border-radius:2px}
   .fiche blockquote cite{display:block;font-family:var(--mono);font-style:normal;font-size:10px;color:var(--parch-dim);letter-spacing:.08em;margin-top:6px;text-transform:uppercase}
@@ -365,7 +370,7 @@
           <h3>Sergueï Valkov</h3>
           <p class="role">Officier · chanteur · Union soviétique</p>
           <p>Au concours Intervision de Moscou, en 1979, c'est lui — en uniforme, étoile rouge à la casquette — qui chante en duo avec Sophie. Une voix de ténor que le public n'a pas oubliée.</p>
-          <p>Trois ans plus tard, une dédicace arrive de l'Est : Valkov reprend « Je garde la lumière » en russe. Cette fois, plus d'uniforme, plus aucun insigne. Juste un homme… et une chanson. Qui l'a autorisé ? Personne ne le sait.</p>
+          <p>Trois ans plus tard, une dédicace arrive de l'Est : Valkov reprend « Je garde la lumière » en russe. Cette fois, plus d'uniforme, plus aucun insigne. Juste un homme… et une chanson. Qui l'a autorisé ? Personne ne le sait. <a href="#dedicace">Écouter la dédicace →</a></p>
           <blockquote>« Свет в окне » — la lumière à la fenêtre.<cite>Dédicace venue de l'Est, 1982</cite></blockquote>
         </div>
       </article>
@@ -458,6 +463,13 @@
   <section id="films">
     <div class="sec-head"><span class="n">05</span><h2>Films &amp; musique</h2><span class="mono">reportages · clips</span></div>
     <p class="lead">Les images qu'elle nous a laissées.</p>
+    <figure class="feature" id="dedicace">
+      <span class="mono">Nouvelle découverte · une dédicace venue de l'Est</span>
+      <video controls preload="none" playsinline poster="images/valkov-teaser-poster.webp" width="1920" height="1080">
+        <source src="media/valkov-je-garde-la-lumiere-ru.mp4" type="video/mp4">
+      </video>
+      <figcaption>Sergueï Valkov — « Je garde la lumière » (version russe)<small>adaptation musicale : Sergueï Valkov · paroles : Sophie Delacroix · sous‑titres français</small></figcaption>
+    </figure>
     <div class="vids" style="margin-top:26px">
       <figure class="vid"><div class="yt" data-yt="PVNWnaHXS7w" role="button" tabindex="0" aria-label="Lire la vidéo : Reagan à Berlin" style="background-image:url(https://i.ytimg.com/vi/PVNWnaHXS7w/hqdefault.jpg)"><span class="lbl">Antenne 2 · 1982</span><span class="play"></span></div><figcaption>Reagan à Berlin<small>édition spéciale — le soir</small></figcaption></figure>
       <figure class="vid"><div class="yt" data-yt="Qo9OCCNgMCA" role="button" tabindex="0" aria-label="Lire la vidéo : Berlin, au petit matin" style="background-image:url(https://i.ytimg.com/vi/Qo9OCCNgMCA/hqdefault.jpg)"><span class="lbl">Antenne 2 · 1982</span><span class="play"></span></div><figcaption>Berlin, au petit matin<small>édition spéciale — le lendemain</small></figcaption></figure>
@@ -514,6 +526,8 @@
   <section id="feed">
     <div class="sec-head"><span class="n">09</span><h2>Dernières découvertes</h2><span class="mono">mis à jour en continu</span></div>
     <div class="feed">
+      <div class="post"><div class="when">02 · 10 · 2026<small>enregistrement</small></div>
+        <div><h3>Une dédicace venue de l'Est</h3><p>Un enregistrement est arrivé jusqu'à nous : Sergueï Valkov, l'officier qui chantait avec Sophie à Moscou, reprend « Je garde la lumière » en russe. Sans uniforme, cette fois. On ne sait ni qui l'a autorisé, ni comment la bande a franchi le Mur. <a href="#dedicace">L'écouter →</a></p><p class="sig">— Le Gardien de la Lumière</p></div></div>
       <div class="post"><div class="when">28 · 09 · 2026<small>ajout d'archive</small></div>
         <div><h3>Un tirage de Charlottenburg refait surface</h3><p>Une photographie la montre agenouillée près du captif enchaîné, la main sur son épaule. Le monument, lui aussi, avait traversé la ville pour rejoindre l'Ouest… mais ça, c'est une autre histoire.</p><p class="sig">— Le Gardien de la Lumière</p></div></div>
       <div class="post"><div class="when">27 · 09 · 2026<small>audio</small></div>
