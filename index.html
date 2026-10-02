@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Archives Delacroix - portee disparue. Elle a disparu, sa lumiere non.">
+<title>Archives Delacroix</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+  :root{
+    --ink:#0c1420;          /* fundal noapte / zid */
+    --ink2:#101c2c;         /* fundal sectiune alternativa */
+    --paper:#e9dfc9;        /* tiparituri de arhiva */
+    --paper2:#ded2b6;
+    --parch:#e7ddc8;        /* text pe fundal inchis */
+    --parch-dim:#a9a288;    /* text secundar */
+    --gold:#e6a94a;         /* LA LUMIERE - accent cald */
+    --gold-soft:#c98f36;
+    --steel:#6f92b4;        /* accent rece */
+    --red:#b23f30;          /* rar - pasiune/clasificat */
+    --line:rgba(230,169,74,.22);
+    --ink-t:#141d2a;        /* text pe hartie */
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --sans:"Archivo",system-ui,sans-serif;
+    --mono:"Space Mono","Courier New",monospace;
+    --wrap:980px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--ink);color:var(--parch);
+    font-family:var(--sans);font-size:16px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(1200px 600px at 70% -10%, rgba(230,169,74,.10), transparent 60%),
+                     radial-gradient(900px 500px at 0% 20%, rgba(111,146,180,.08), transparent 55%);
+  }
+  .wrap{max-width:var(--wrap);margin:0 auto;padding-inline:20px}
+  a{color:var(--gold);text-decoration:none}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;text-wrap:balance;margin:0}
+  .mono{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:var(--gold-soft)}
+
+  /* ---- NAV ---- */
+  header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;
+    background:rgba(10,17,28,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;gap:18px;padding-block:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:20px;color:var(--parch);white-space:nowrap}
+  .mono-badge{display:inline-grid;place-items:center;width:34px;height:34px;border:1px solid var(--gold);color:var(--gold);
+    font-family:var(--serif);font-size:18px;border-radius:2px}
+  nav{margin-left:auto;display:flex;gap:20px;flex-wrap:wrap}
+  nav a{font-family:var(--sans);font-size:13px;letter-spacing:.03em;color:var(--parch-dim)}
+  nav a:hover{color:var(--gold)}
+  @media(max-width:720px){nav{display:none}}
+
+  /* ---- HERO ---- */
+  .hero{padding-block:64px 40px;position:relative}
+  .hero .eyebrow{margin-bottom:22px}
+  .hero h1{font-size:clamp(52px,11vw,120px);line-height:.92;letter-spacing:-.01em;color:var(--parch)}
+  .hero h1 .lum{color:var(--gold);font-style:italic}
+  .dates{font-family:var(--mono);font-size:14px;color:var(--parch-dim);margin-top:18px;letter-spacing:.1em}
+  .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3.4vw,32px);color:var(--parch);
+    margin-top:14px;max-width:22ch;line-height:1.2}
+  .hero-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:36px;align-items:end;margin-top:36px}
+  @media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:26px}}
+  .curator-note{border-left:2px solid var(--gold);padding:4px 0 4px 18px;color:var(--parch-dim);font-size:14.5px}
+  .curator-note em{color:var(--parch);font-style:normal}
+
+  /* ---- PHOTO FRAME (tiparitura de arhiva) ---- */
+  .frame{background:var(--paper);color:var(--ink-t);border-radius:2px;padding:10px 10px 0;
+    box-shadow:0 14px 30px rgba(0,0,0,.45);position:relative}
+  .frame .img{aspect-ratio:4/5;border-radius:1px;position:relative;overflow:hidden;
+    background:linear-gradient(150deg,#26364a,#0f1a28 55%,#3a2b1a);display:grid;place-items:center}
+  .frame.wide .img{aspect-ratio:16/10}
+  .frame .img .mono-monogram{font-family:var(--serif);font-size:64px;color:rgba(230,169,74,.35)}
+  .frame .img::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 30% 20%,rgba(230,169,74,.16),transparent 60%);mix-blend-mode:screen}
+  .frame .cap{display:flex;justify-content:space-between;gap:8px;padding:9px 4px 11px;font-family:var(--mono);font-size:10.5px;color:#6a5c3f;text-transform:uppercase;letter-spacing:.08em}
+  .frame .cap b{color:var(--ink-t);font-weight:700}
+  .frame .place-label{position:absolute;top:16px;left:16px;background:rgba(12,20,32,.72);color:var(--paper);
+    font-family:var(--mono);font-size:10px;letter-spacing:.1em;padding:4px 8px;text-transform:uppercase}
+  .tape{position:absolute;top:-9px;left:50%;transform:translateX(-50%) rotate(-2deg);width:96px;height:22px;
+    background:rgba(230,169,74,.28);border:1px solid rgba(230,169,74,.25)}
+
+  /* ---- SECTIONS ---- */
+  section{padding-block:52px;border-top:1px solid var(--line)}
+  section.alt{background:var(--ink2)}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+  .sec-head h2{font-size:clamp(30px,5vw,44px);color:var(--parch)}
+  .sec-head .n{font-family:var(--mono);color:var(--gold-soft);font-size:12px}
+  .lead{font-family:var(--serif);font-size:clamp(19px,2.6vw,23px);line-height:1.45;color:var(--parch);max-width:60ch}
+  .prose{max-width:62ch;color:var(--parch-dim);font-size:16px}
+  .prose p{margin:0 0 16px}
+  .prose .redact{background:var(--parch-dim);color:transparent;border-radius:1px;padding:0 2px;user-select:none}
+  .prose .q{color:var(--gold)}
+
+  /* galerie grid */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:760px){.gal{grid-template-columns:repeat(2,1fr);gap:14px}}
+  @media(max-width:420px){.gal{grid-template-columns:1fr}}
+
+  /* timeline */
+  .tl{display:flex;flex-direction:column;gap:0;position:relative}
+  .tl .ev{display:grid;grid-template-columns:120px 1fr;gap:22px;padding:22px 0;border-top:1px solid var(--line)}
+  .tl .ev:first-child{border-top:0}
+  .tl .yr{font-family:var(--serif);font-size:34px;color:var(--gold);line-height:1}
+  .tl .yr small{display:block;font-family:var(--mono);font-size:10px;color:var(--parch-dim);letter-spacing:.1em;margin-top:6px}
+  .tl .ev h3{font-size:24px;color:var(--parch);margin-bottom:6px}
+  .tl .ev p{margin:0;color:var(--parch-dim);font-size:15px;max-width:58ch}
+  @media(max-width:600px){.tl .ev{grid-template-columns:1fr;gap:8px}.tl .yr{font-size:26px}}
+
+  /* discographie */
+  .disco{display:flex;flex-direction:column;gap:2px}
+  .track{display:grid;grid-template-columns:auto 1fr auto auto;gap:16px;align-items:center;
+    padding:16px 4px;border-top:1px solid var(--line)}
+  .track:first-child{border-top:0}
+  .track .num{font-family:var(--mono);color:var(--gold-soft);font-size:13px}
+  .track .t{font-family:var(--serif);font-size:22px;color:var(--parch)}
+  .track .meta{font-family:var(--mono);font-size:11px;color:var(--parch-dim);letter-spacing:.08em}
+  .track .play{border:1px solid var(--line);color:var(--gold);border-radius:999px;padding:6px 14px;font-family:var(--sans);font-size:12px;background:transparent;cursor:pointer;white-space:nowrap}
+  .track .play:hover{border-color:var(--gold);background:rgba(230,169,74,.08)}
+  @media(max-width:600px){.track{grid-template-columns:auto 1fr auto}.track .meta{display:none}}
+
+  /* mystere */
+  .myst{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(max-width:640px){.myst{grid-template-columns:1fr}}
+  .qcard{border:1px solid var(--line);border-radius:3px;padding:22px;background:rgba(230,169,74,.03)}
+  .qcard .mark{font-family:var(--serif);font-size:40px;color:var(--gold);line-height:.6}
+  .qcard h3{font-size:22px;color:var(--parch);margin:12px 0 8px}
+  .qcard p{margin:0;color:var(--parch-dim);font-size:14.5px}
+
+  /* decouvertes feed */
+  .feed{display:flex;flex-direction:column;gap:0}
+  .post{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:24px 0;border-top:1px solid var(--line)}
+  .post:first-child{border-top:0}
+  .post .when{font-family:var(--mono);font-size:11px;color:var(--gold-soft);letter-spacing:.08em}
+  .post .when small{display:block;color:var(--parch-dim);margin-top:6px}
+  .post h3{font-size:23px;color:var(--parch);margin-bottom:8px}
+  .post p{margin:0 0 10px;color:var(--parch-dim);font-size:15px;max-width:60ch}
+  .sig{font-family:var(--serif);font-style:italic;color:var(--gold)}
+  @media(max-width:600px){.post{grid-template-columns:1fr;gap:8px}}
+
+  .cta{display:inline-block;margin-top:22px;border:1px solid var(--gold);color:var(--gold);
+    padding:12px 24px;border-radius:2px;font-size:14px;letter-spacing:.03em}
+  .cta:hover{background:var(--gold);color:var(--ink)}
+
+  /* videos (embed YouTube - facade click-to-load) */
+  .vids{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  @media(max-width:700px){.vids{grid-template-columns:1fr}}
+  .vid{margin:0}
+  .vid .yt{position:relative;aspect-ratio:16/9;border-radius:3px;overflow:hidden;cursor:pointer;
+    background:linear-gradient(135deg,#1a2a3e,#0c1420 60%,#3a2b1a);border:1px solid var(--line)}
+  .vid .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .vid .yt .play{position:absolute;inset:0;display:grid;place-items:center}
+  .vid .yt .play::before{content:"";width:72px;height:72px;border-radius:999px;background:rgba(230,169,74,.92);
+    box-shadow:0 8px 26px rgba(0,0,0,.5)}
+  .vid .yt .play::after{content:"";position:absolute;border-style:solid;border-width:15px 0 15px 26px;
+    border-color:transparent transparent transparent var(--ink);transform:translateX(3px)}
+  .vid .yt:hover .play::before{background:var(--gold)}
+  .vid .yt .lbl{position:absolute;left:14px;top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+    color:var(--paper);background:rgba(12,20,32,.7);padding:4px 8px;text-transform:uppercase;z-index:2}
+  .vid figcaption{font-family:var(--serif);font-size:19px;color:var(--parch);margin-top:12px}
+  .vid figcaption small{display:block;font-family:var(--mono);font-size:10.5px;color:var(--parch-dim);letter-spacing:.08em;margin-top:4px}
+  footer{border-top:1px solid var(--line);padding-block:44px;background:var(--ink2)}
+  footer .disc{font-family:var(--mono);font-size:11px;color:var(--parch-dim);letter-spacing:.06em;line-height:1.8;max-width:70ch}
+  footer .disc b{color:var(--steel)}
+  @media(prefers-reduced-motion:no-preference){
+    .glow{animation:pulse 6s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:.85}50%{opacity:1}}
+  }
+  /* ---- ECRAN DE INTRARE (deblocheaza sunetul la click) ---- */
+  #enter{position:fixed;inset:0;z-index:200;background:radial-gradient(900px 600px at 50% 38%,#16233a,#080e18 70%);
+    display:grid;place-items:center;text-align:center;padding:24px;transition:opacity .8s ease}
+  #enter.gone{opacity:0;pointer-events:none}
+  #enter .flame{width:14px;height:34px;margin:0 auto 26px;border-radius:50% 50% 45% 45%;
+    background:radial-gradient(circle at 50% 70%,#fff2c4,#e6a94a 55%,#b23f30 100%);
+    box-shadow:0 0 34px 10px rgba(230,169,74,.55);animation:flick 2.4s ease-in-out infinite}
+  @keyframes flick{0%,100%{transform:scaleY(1) rotate(-1deg);opacity:.95}50%{transform:scaleY(1.12) rotate(1deg);opacity:1}}
+  #enter h2{font-family:var(--serif);font-size:clamp(40px,9vw,84px);color:var(--parch);line-height:.95}
+  #enter h2 .lum{color:var(--gold);font-style:italic}
+  #enter p{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--parch-dim);margin:16px 0 30px;text-transform:uppercase}
+  #enter button{font-family:var(--serif);font-size:20px;color:var(--ink);background:var(--gold);border:0;
+    padding:14px 40px;border-radius:2px;cursor:pointer;letter-spacing:.02em}
+  #enter button:hover{background:#f2ba5e}
+  .sound{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:120;
+    width:44px;height:44px;border-radius:999px;border:1px solid var(--line);background:rgba(12,20,32,.75);
+    color:var(--gold);font-size:18px;cursor:pointer;display:none;place-items:center;backdrop-filter:blur(6px)}
+  .sound.show{display:grid}
+  @media(prefers-reduced-motion:reduce){#enter .flame{animation:none}}
+</style>
+<style>html{-webkit-text-size-adjust:100%}img{max-width:100%;display:block}[hidden]{display:none!important}code{font-family:'Space Mono',monospace;font-size:.85em;color:var(--gold)}</style>
+</head>
+<body>
+<div id="enter">
+  <div>
+    <div class="flame"></div>
+    <h2>Sophie <span class="lum">Delacroix</span></h2>
+    <p>Archives · portée disparue · le tunnel du temps</p>
+    <button id="enterBtn" type="button">Entrer dans les archives</button>
+  </div>
+</div>
+<audio id="amb" loop preload="none" data-src="audio/ballade-lumiere-instrumental.mp3"></audio>
+<button class="sound" id="soundBtn" type="button" aria-label="Activer / couper le son">🔊</button>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand"><span class="mono-badge">SD</span> Archives&nbsp;Delacroix</span>
+    <nav>
+      <a href="#bio">Biographie</a>
+      <a href="#actions">Ses actions</a>
+      <a href="#films">Films</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#disco">Musique</a>
+      <a href="#mystere">Le mystère</a>
+      <a href="#feed">Découvertes</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" style="border-top:0">
+    <p class="mono eyebrow glow">Archives non officielles · Portée disparue · « Le tunnel du temps »</p>
+    <h1>Sophie <span class="lum">Delacroix</span></h1>
+    <p class="dates">1958&nbsp;? — portée disparue depuis 19··&nbsp;&nbsp;|&nbsp;&nbsp;chanteuse · émissaire · énigme</p>
+    <div class="hero-grid">
+      <div>
+        <p class="tagline">« Elle a disparu. Sa lumière, non. »</p>
+        <p class="curator-note" style="margin-top:24px">
+          Un soir, après Berlin, sa trace se perd — aucune archive ne dit ce qu'elle est devenue. Ce lieu rassemble tout ce que nous parvenons à retrouver d'elle : photographies, chansons, gestes de paix. Il grandit à chaque nouvelle découverte. <em>Si vous détenez un fragment, une image, un souvenir — il a sa place ici.</em>
+        </p>
+        <a class="cta" href="#feed">Voir les dernières découvertes →</a>
+      </div>
+      <div class="frame">
+        <div class="tape"></div>
+        <div class="img"><span class="mono-monogram">S·D</span>
+          <span class="place-label">Portrait · sans date</span>
+        </div>
+        <div class="cap"><span>réf. <b>SD‑001</b></span><span>tirage argentique</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIOGRAPHIE -->
+  <section id="bio">
+    <div class="sec-head"><span class="n">01</span><h2>Biographie fragmentaire</h2></div>
+    <p class="lead">On sait peu de choses, et c'est peut-être ainsi qu'elle l'aurait voulu.</p>
+    <div class="prose" style="margin-top:22px">
+      <p>Venue de France au tournant des années 80, Sophie Delacroix chantait dans une langue que tout le monde comprenait, même sans les mots. Là où les diplomates échouaient, elle passait — d'un côté du rideau à l'autre, invitée aussi bien à <span class="q">Moscou</span> qu'à l'Ouest.</p>
+      <p>En 1982, un président américain fit d'elle son <span class="q">émissaire personnelle</span> pour la question du Mur — du jamais-vu : une artiste, et non un ministre. Le soir de Berlin, elle monta sur une plateforme de bois et parla, non pas aux gouvernements, mais aux gens.</p>
+      <p>De ses origines, on ne sait presque rien. Les archives se contredisent&nbsp;: <span class="redact">née à ·········· en ····</span>, dit l'une&nbsp;; <span class="redact">arrivée par ··········</span>, dit l'autre. Elle n'a jamais rectifié. <span class="q">C'est là que commence le mystère.</span></p>
+    </div>
+  </section>
+
+  <!-- SES ACTIONS -->
+  <section id="actions" class="alt">
+    <div class="sec-head"><span class="n">02</span><h2>Ses actions de paix</h2><span class="mono">chronologie</span></div>
+    <div class="tl">
+      <div class="ev"><div class="yr">1979<small>Moscou</small></div>
+        <div><h3>Au-delà du rideau de fer</h3><p>Reçue à Moscou alors que tout séparait les deux blocs. On raconte qu'elle chanta là où l'on ne l'attendait pas, et que le peuple l'aima.</p></div></div>
+      <div class="ev"><div class="yr">1982<small>Moscou · Kremlin</small></div>
+        <div><h3>Le président Brejnev la reçoit</h3><p>Une chanteuse française au Kremlin, en pleine Guerre froide. « Elle a fait ce que nos traités n'ont pu faire », dira plus tard un officiel.</p></div></div>
+      <div class="ev"><div class="yr">1982<small>Berlin · le Mur</small></div>
+        <div><h3>Le soir du Mur</h3><p>Émissaire personnelle du président américain. Sur une plateforme improvisée, face aux Berlinois : « Là où les murs séparent, la musique rassemble. »</p></div></div>
+      <div class="ev"><div class="yr">1982<small>Berlin · Charlottenburg</small></div>
+        <div><h3>Les captifs enchaînés</h3><p>Au pied d'un monument aux conquérants, elle s'agenouille auprès d'un captif de bronze, enchaîné depuis trois siècles, et pose la main sur ses chaînes. Un geste — rien qu'un geste.</p></div></div>
+    </div>
+  </section>
+
+  <!-- FILMS & MUSIQUE (embed YouTube) -->
+  <section id="films" class="alt">
+    <div class="sec-head"><span class="n">03</span><h2>Films &amp; musique</h2><span class="mono">reportages · clips</span></div>
+    <p class="lead">Les images qu'elle nous a laissées.</p>
+    <div class="vids" style="margin-top:26px">
+      <figure class="vid"><div class="yt" data-yt="" role="button" tabindex="0" aria-label="Lire la vidéo"><span class="lbl">Berlin · 1982</span><span class="play"></span></div><figcaption>Le soir du Mur<small>reportage — Antenne 2</small></figcaption></figure>
+      <figure class="vid"><div class="yt" data-yt="" role="button" tabindex="0" aria-label="Lire la vidéo"><span class="lbl">Clip</span><span class="play"></span></div><figcaption>« Ballade Lumière »<small>chanson-signature · 1982</small></figcaption></figure>
+      <figure class="vid"><div class="yt" data-yt="" role="button" tabindex="0" aria-label="Lire la vidéo"><span class="lbl">Moscou</span><span class="play"></span></div><figcaption>Au-delà du rideau de fer<small>archive</small></figcaption></figure>
+      <figure class="vid"><div class="yt" data-yt="8QVzLvf-L4M" role="button" tabindex="0" aria-label="Lire la vidéo"><span class="lbl">Studio Aurore · 1979</span><span class="play"></span></div><figcaption>« Je garde la lumière »<small>Studio Aurore, Paris 1979</small></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie">
+    <div class="sec-head"><span class="n">04</span><h2>Galerie</h2><span class="mono">par lieu · tirages retrouvés</span></div>
+    <div class="gal">
+      <div class="frame"><div class="img"><span class="mono-monogram">01</span><span class="place-label">Moscou · Kremlin</span></div><div class="cap"><span>réf. <b>SD‑014</b></span><span>1982</span></div></div>
+      <div class="frame"><div class="img"><span class="mono-monogram">02</span><span class="place-label">Berlin · le Mur</span></div><div class="cap"><span>réf. <b>SD‑022</b></span><span>1982</span></div></div>
+      <div class="frame"><div class="img"><span class="mono-monogram">03</span><span class="place-label">Charlottenburg</span></div><div class="cap"><span>réf. <b>SD‑031</b></span><span>1982</span></div></div>
+      <div class="frame"><div class="img"><span class="mono-monogram">04</span><span class="place-label">La plateforme</span></div><div class="cap"><span>réf. <b>SD‑026</b></span><span>1982</span></div></div>
+      <div class="frame"><div class="img"><span class="mono-monogram">05</span><span class="place-label">Paris · scène</span></div><div class="cap"><span>réf. <b>SD‑008</b></span><span>sans date</span></div></div>
+      <div class="frame"><div class="img"><span class="mono-monogram">06</span><span class="place-label">Sophie &amp; les statues</span></div><div class="cap"><span>réf. <b>SD‑040</b></span><span>série</span></div></div>
+    </div>
+    <p class="prose" style="margin-top:18px"><span class="mono">note d'archive —</span> emplacements réservés aux tirages en cours de numérisation. Les photographies définitives viendront remplacer ces cadres.</p>
+  </section>
+
+  <!-- DISCOGRAPHIE -->
+  <section id="disco" class="alt">
+    <div class="sec-head"><span class="n">05</span><h2>Sa musique</h2><span class="mono">discographie</span></div>
+    <div class="disco">
+      <div class="track"><span class="num">01</span><span class="t">Ballade Lumière</span><span class="meta">1982 · chanson-signature</span><button class="play" type="button">écouter ▸</button></div>
+      <div class="track"><span class="num">02</span><span class="t">Je garde la lumière</span><span class="meta">1982</span><button class="play" type="button">écouter ▸</button></div>
+      <div class="track"><span class="num">03</span><span class="t">Au-dessus des murs</span><span class="meta">inédit retrouvé</span><button class="play" type="button">écouter ▸</button></div>
+    </div>
+    <p class="prose" style="margin-top:18px"><span class="mono">note —</span> les liens d'écoute pointeront vers les enregistrements officiels de la chaîne.</p>
+  </section>
+
+  <!-- LE MYSTERE -->
+  <section id="mystere">
+    <div class="sec-head"><span class="n">06</span><h2>Le mystère</h2></div>
+    <p class="lead">Cinq questions que personne n'a jamais tranchées.</p>
+    <div class="myst" style="margin-top:26px">
+      <div class="qcard"><div class="mark">?</div><h3>D'où venait-elle vraiment ?</h3><p>Les papiers se contredisent. Certains jurent qu'elle n'était pas seulement française.</p></div>
+      <div class="qcard"><div class="mark">?</div><h3>Pourquoi elle, et elle seule ?</h3><p>Comment une chanteuse est-elle devenue l'émissaire de l'homme le plus puissant du monde ?</p></div>
+      <div class="qcard"><div class="mark">?</div><h3>Que s'est-il passé à Moscou ?</h3><p>Les récits de ce voyage manquent. Il ne reste que des images, et des sourires.</p></div>
+      <div class="qcard"><div class="mark">?</div><h3>Où est-elle aujourd'hui ?</h3><p>Après Berlin, la trace se perd. Aucune archive ne dit ce qu'elle est devenue.</p></div>
+    </div>
+  </section>
+
+  <!-- DECOUVERTES -->
+  <section id="feed" class="alt">
+    <div class="sec-head"><span class="n">07</span><h2>Dernières découvertes</h2><span class="mono">mis à jour en continu</span></div>
+    <div class="feed">
+      <div class="post"><div class="when">28 · 09 · 2026<small>ajout d'archive</small></div>
+        <div><h3>Un tirage de Charlottenburg refait surface</h3><p>Une photographie la montre agenouillée près du captif enchaîné, la main sur son épaule. Le monument, lui aussi, avait traversé la ville pour rejoindre l'Ouest… mais ça, c'est une autre histoire.</p><p class="sig">— Le Gardien de la Lumière</p></div></div>
+      <div class="post"><div class="when">27 · 09 · 2026<small>audio</small></div>
+        <div><h3>« Ballade Lumière » — la version du soir de Berlin</h3><p>Le même thème, mais plus grave, plus lent. Comme si elle chantait pour ceux qui n'étaient pas encore libres.</p><p class="sig">— Le Gardien de la Lumière</p></div></div>
+      <div class="post"><div class="when">·· · ·· · ····<small>en attente</small></div>
+        <div><h3>Votre contribution ici</h3><p>Chaque fragment retrouvé — image, chanson, témoignage — sera ajouté à ce tunnel du temps.</p></div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="font-family:var(--serif);font-size:26px;color:var(--parch);margin:0 0 10px">« Là où les murs dressent des barrières, la musique tend des ponts. »</p>
+    <p class="disc">
+      Archives Delacroix — hommage de fans, tenu par « le Gardien de la Lumière ».<br>
+      <b>Sophie Delacroix est un personnage de fiction.</b> Les images et les musiques présentées sont des œuvres générées par intelligence artificielle, créées dans un but artistique. Toute ressemblance avec des personnes réelles serait fortuite.
+    </p>
+  </div>
+</footer>
+<script>
+  // Facade: la click, inlocuieste vigneta cu lectorul YouTube (nimic greu nu se incarca inainte)
+  function loadYT(el){
+    var id=el.getAttribute('data-yt');
+    if(!id){ el.querySelector('.play').style.opacity=.35; return; } // fara ID inca
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0';
+    f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    f.allowFullscreen=true; el.innerHTML=''; el.appendChild(f);
+  }
+  document.querySelectorAll('.yt').forEach(function(el){
+    el.addEventListener('click',function(){loadYT(el)});
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();loadYT(el)}});
+  });
+
+  // --- Ambianta sonora : demareaza a l'entree (le clic debloque l'audio) ---
+  (function(){
+    var enter=document.getElementById('enter'), btn=document.getElementById('enterBtn');
+    var amb=document.getElementById('amb'), sb=document.getElementById('soundBtn');
+    var want=true; try{ if(localStorage.getItem('sd_mute')==='1') want=false; }catch(e){}
+    function fadeIn(a){ a.volume=0; var v=0; var t=setInterval(function(){v=Math.min(v+0.04,0.55); a.volume=v; if(v>=0.55)clearInterval(t);},120); }
+    function startAudio(){
+      if(!amb.src){ amb.src=amb.getAttribute('data-src'); }
+      if(want){ var p=amb.play(); if(p&&p.catch)p.catch(function(){}); fadeIn(amb); }
+      sb.classList.add('show'); sb.textContent = want ? '🔊' : '🔇';
+    }
+    function enterSite(){ enter.classList.add('gone'); setTimeout(function(){enter.hidden=true;},900); startAudio(); }
+    if(btn) btn.addEventListener('click',enterSite);
+    if(sb) sb.addEventListener('click',function(){
+      want=!want;
+      if(want){ if(!amb.src)amb.src=amb.getAttribute('data-src'); var p=amb.play(); if(p&&p.catch)p.catch(function(){}); amb.volume=0.55; sb.textContent='🔊'; }
+      else { amb.pause(); sb.textContent='🔇'; }
+      try{ localStorage.setItem('sd_mute', want?'0':'1'); }catch(e){}
+    });
+  })();
+</script>
+
+</body>
+</html>
