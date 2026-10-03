@@ -237,6 +237,12 @@
   .hist-note{margin:0;max-width:70ch;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--steel);
     border:1px dashed rgba(111,146,180,.45);padding:10px 14px;border-radius:2px}
   .fiche blockquote cite{display:block;font-family:var(--mono);font-style:normal;font-size:10px;color:var(--parch-dim);letter-spacing:.08em;margin-top:6px;text-transform:uppercase}
+  .lyrics{margin-top:16px;border-top:1px solid var(--gold-soft);padding-top:12px}
+  .lyrics summary{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+  .lyrics .cols{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:14px}
+  .lyrics .cols div{font-family:var(--serif);font-size:16px;line-height:1.55;color:var(--parch);white-space:pre-line}
+  .lyrics .cols b{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--parch-dim);margin-top:10px;font-weight:normal;text-transform:uppercase}
+  @media (max-width:700px){.lyrics .cols{grid-template-columns:1fr}}
 </style>
 <style>html{-webkit-text-size-adjust:100%}img{max-width:100%;display:block}[hidden]{display:none!important}code{font-family:'Space Mono',monospace;font-size:.85em;color:var(--gold)}</style>
 </head>
@@ -375,6 +381,22 @@
         </div>
       </article>
 
+      <article class="fiche">
+        <div class="ph duo">
+          <img src="images/holloway-uniforme.webp" alt="Le capitaine Jack Holloway, en uniforme de l'US Army, chante au micro devant le chœur, à Berlin-Ouest" loading="lazy" width="960" height="720">
+          <img src="images/holloway-civil.webp" alt="Jack Holloway en civil, blouson de cuir, sur le Kurfürstendamm" loading="lazy" width="960" height="720">
+          <span class="tag">Dossier JH‑05</span>
+          <span class="yr" style="left:10px">Berlin‑Ouest · 1982</span><span class="yr" style="right:10px">en civil</span>
+        </div>
+        <div class="body">
+          <h3>Jack Holloway</h3>
+          <p class="role">Capitaine · baryton · US Army, Berlin Brigade</p>
+          <p>Un Américain du Tennessee, élevé au gospel et à la country. Officier à Berlin‑Ouest, il chante comme baryton dans le chœur de la garnison. Un sourire large — et, derrière, des souvenirs du Viêt Nam dont il ne parle jamais.</p>
+          <p>À l'Est, Valkov avait mis la chanson de Sophie sur une musique russe. Holloway et le chœur de l'US Army lui répondent : ils la mettent sur une musique américaine. <a href="#reponse-ouest">Écouter la réponse →</a></p>
+          <blockquote>« Les Russes l'ont mise sur leur musique. Nous, on l'a mise sur la nôtre. »<cite>Le chœur de l'US Army, Berlin, 1982</cite></blockquote>
+        </div>
+      </article>
+
     </div>
 
     <div class="sec-head" style="margin:52px 0 10px"><h2 style="font-size:clamp(26px,4vw,34px)">Les grands de ce monde</h2><span class="mono">figures historiques</span></div>
@@ -463,6 +485,20 @@
           <p>Qui est l'enfant&nbsp;? Qui a pris la photo&nbsp;? Comment le tirage a‑t‑il franchi le Mur&nbsp;? Personne ne le sait. Mais la conversation a commencé.</p>
         </div>
       </div>
+
+      <div class="stat" id="tempelhof">
+        <figure class="frame" style="margin:0"><div class="tape"></div>
+          <div class="img"><img src="images/statue-tempelhof-holloway.webp" alt="Jack Holloway, en civil, tient une fillette au bonnet rouge qui lance vers le ciel un petit parachute de mouchoir chargé de bonbons, devant le mémorial du Pont aérien à Tempelhof" loading="lazy" width="1344" height="752"></div>
+          <div class="cap"><span>réf. <b>SD‑ST4</b></span><span>Berlin‑Ouest · Tempelhof</span></div></figure>
+        <div>
+          <span class="no">Statue n° 4 · Berlin‑Ouest</span>
+          <h3>Des bonbons tombés du ciel</h3>
+          <p>1948. Staline ferme toutes les routes vers Berlin‑Ouest : plus de pain, plus de charbon, plus rien. Pendant près d'un an, les avions américains et britanniques ravitaillent la ville par les airs — un appareil toutes les quelques minutes, jour et nuit, par tous les temps. Des pilotes lâchent même, au‑dessus des enfants, de petits parachutes faits de mouchoirs, chargés de bonbons. Les Berlinois les surnomment les « bombardiers à raisins secs ».</p>
+          <p>Le Pont aérien a coûté la vie à des dizaines d'aviateurs. Devant l'aéroport de Tempelhof, un grand arc de béton s'élance vers l'ouest et se termine en trois branches — les trois couloirs aériens. Les Berlinois l'appellent la « Hungerharke », le râteau de la faim. On peut y lire&nbsp;: « Ils ont donné leur vie pour la liberté de Berlin, au service du Pont aérien ».</p>
+          <p>Un nouveau tirage nous est parvenu&nbsp;: le capitaine Jack Holloway, en civil, au pied du mémorial. Dans ses bras, une fillette au bonnet rouge lance vers le ciel un petit parachute de mouchoir, chargé de bonbons.</p>
+          <p class="geste">À l'Est, un soldat porte une enfant. À l'Ouest, une enfant renvoie un parachute vers le ciel. Les statues continuent de se répondre.</p>
+        </div>
+      </div>
     </div>
 
     <div class="next">
@@ -484,6 +520,73 @@
         <source src="media/valkov-je-garde-la-lumiere-ru.mp4" type="video/mp4">
       </video>
       <figcaption>Sergueï Valkov — « Je garde la lumière » (version russe)<small>adaptation musicale : Sergueï Valkov · paroles : Sophie Delacroix · sous‑titres français</small></figcaption>
+    </figure>
+    <figure class="feature" id="reponse-ouest">
+      <span class="mono">Nouvelle découverte · la réponse de l'Ouest</span>
+      <video controls preload="none" playsinline poster="images/holloway-teaser-poster.webp" width="1920" height="1080">
+        <source src="media/holloway-keep-the-flame-burning-us.mp4" type="video/mp4">
+      </video>
+      <figcaption>Capitaine Jack Holloway &amp; le chœur de l'US Army — « Keep the Flame Burning » (version américaine)<small>paroles : Sophie Delacroix, adaptation anglaise · arrangement : sergent‑major Walter Briggs · sous‑titres français</small></figcaption>
+      <details class="lyrics"><summary>Les paroles · anglais / français</summary>
+        <div class="cols"><div><b>Couplet 1 · baryton</b>Grab your coat, the morning train is calling,
+Don't you look back, don't you fret for me;
+I'll be standing where the leaves are falling,
+Right where you left me, where I'll always be.
+<b>Couplet 2 · voix de femme</b>I won't cry, I've got no time for crying,
+Some fine morning, when the sky turns blue,
+I'll hear your boots come up the gravel lane,
+And I'll be running down the steps to you.
+<b>Refrain · chœur</b>So I'll keep the flame burning in the window,
+Leave the door a little open wide,
+Keep the fire warm and the wine poured,
+'Til you're standing here again by my side.
+<b>Couplet 3 · voix de femme</b>Folks in town all shake their heads and tell me:
+"Close the curtains, let the memory go."
+But your chair still waits beside the table,
+And your summer's waiting in the snow.
+<b>Pont · duo</b>And when the years have walked across my name,
+When my old song's just a winter's night,
+That little lamp will burn on just the same,
+And guide you home through the smoke and the night.
+<b>Couplet 4 · baryton</b>I saw your light from every lonely station,
+Across the fields of every foreign land,
+And now I'm walking up the gravel lane,
+With all the winters folded in my hand.
+<b>Final · duo</b>I'll keep the flame burning…
+Through the long and lonely night,
+When the morning train comes home,
+You will know me by the light.
+You know the way home.</div><div><b>Couplet 1</b>Prends ton manteau, le train du matin t'appelle,
+ne te retourne pas, ne t'en fais pas pour moi ;
+je serai là où tombent les feuilles,
+là où tu m'as laissée, là où je serai toujours.
+<b>Couplet 2</b>Je ne pleurerai pas, je n'ai pas le temps de pleurer,
+un beau matin, quand le ciel sera bleu,
+j'entendrai tes bottes monter l'allée de gravier,
+et je dévalerai les marches jusqu'à toi.
+<b>Refrain</b>Alors je garderai la flamme allumée à la fenêtre,
+je laisserai la porte entrouverte,
+le feu bien chaud et le vin servi,
+jusqu'à ce que tu sois de nouveau là, à mes côtés.
+<b>Couplet 3</b>Les gens du quartier hochent la tête et me disent :
+« Tire les rideaux, laisse partir le souvenir. »
+Mais ta chaise attend encore près de la table,
+et ton été attend sous la neige.
+<b>Pont</b>Et quand les années auront passé sur mon nom,
+quand ma vieille chanson ne sera qu'une nuit d'hiver,
+cette petite lampe brûlera toujours,
+pour te guider à travers la fumée et la nuit.
+<b>Couplet 4</b>J'ai vu ta lumière depuis chaque gare solitaire,
+à travers les champs de chaque terre étrangère,
+et maintenant je monte l'allée de gravier,
+avec tous les hivers pliés dans ma main.
+<b>Final</b>Je garderai la flamme allumée…
+à travers la longue nuit solitaire,
+quand le train du matin rentrera,
+tu me reconnaîtras à la lumière.
+Tu connais le chemin de la maison.</div></div>
+        <p class="prose" style="margin-top:12px;font-size:14px">Valkov avait chanté seul, à l'Est, les mots d'une femme qui attend. À l'Ouest, les couplets de Sophie retrouvent enfin une voix de femme — une jeune soldate du chœur — tandis que le baryton lui répond. Le dernier couplet est nouveau&nbsp;: celui du retour.</p>
+      </details>
     </figure>
     <div class="vids" style="margin-top:26px">
       <figure class="vid"><div class="yt" data-yt="PVNWnaHXS7w" role="button" tabindex="0" aria-label="Lire la vidéo : Reagan à Berlin" style="background-image:url(https://i.ytimg.com/vi/PVNWnaHXS7w/hqdefault.jpg)"><span class="lbl">Antenne 2 · 1982</span><span class="play"></span></div><figcaption>Reagan à Berlin<small>édition spéciale — le soir</small></figcaption></figure>
@@ -541,6 +644,10 @@
   <section id="feed">
     <div class="sec-head"><span class="n">09</span><h2>Dernières découvertes</h2><span class="mono">mis à jour en continu</span></div>
     <div class="feed">
+      <div class="post"><div class="when">03 · 10 · 2026<small>enregistrement</small></div>
+        <div><h3>La réponse de l'Ouest</h3><p>Après la dédicace venue de l'Est, une bande arrive de Berlin‑Ouest : le chœur de l'US Army et le capitaine Jack Holloway chantent « Keep the Flame Burning » — les mots de Sophie, sur une musique américaine. Les deux Grands chantent désormais la même chanson française. <a href="#reponse-ouest">L'écouter →</a></p><p class="sig">— Le Gardien de la Lumière</p></div></div>
+      <div class="post"><div class="when">03 · 10 · 2026<small>tirage photographique</small></div>
+        <div><h3>Un parachute de bonbons</h3><p>Devant le mémorial du Pont aérien, à Tempelhof, Jack Holloway tient une fillette qui lance vers le ciel un parachute de mouchoir. Valkov avait répondu à Sophie à Treptow ; l'Ouest répond à son tour. <a href="#tempelhof">Voir la photographie →</a></p><p class="sig">— Le Gardien de la Lumière</p></div></div>
       <div class="post"><div class="when">02 · 10 · 2026<small>tirage photographique</small></div>
         <div><h3>Une réponse venue de l'Est</h3><p>Un tirage inattendu : Sergueï Valkov au mémorial de Treptow, une fillette dans les bras et des fleurs à la place de l'épée. Sophie parle aux statues de l'Ouest ; quelqu'un, à l'Est, a compris le message. <a href="#treptow">Voir la photographie →</a></p><p class="sig">— Le Gardien de la Lumière</p></div></div>
       <div class="post"><div class="when">02 · 10 · 2026<small>enregistrement</small></div>
