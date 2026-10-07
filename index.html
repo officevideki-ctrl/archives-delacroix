@@ -142,6 +142,11 @@
   .qcard p{margin:0;color:var(--parch-dim);font-size:14.5px}
 
   /* decouvertes feed */
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .fact{border:1px solid var(--line);border-radius:2px;padding:20px 20px 18px;background:rgba(255,255,255,.015)}
+  .fact .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft)}
+  .fact h3{font-family:var(--serif);font-size:22px;line-height:1.2;margin:8px 0 8px;color:var(--parch)}
+  .fact p{margin:0;color:var(--parch-dim);font-size:15px;line-height:1.55}
   .feed{display:flex;flex-direction:column;gap:0}
   .post{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:24px 0;border-top:1px solid var(--line)}
   .post:first-child{border-top:0}
@@ -284,6 +289,7 @@
       <a href="#galerie">Galerie</a>
       <a href="#disco">Musique</a>
       <a href="#mystere">Le mystère</a>
+      <a href="#berlin82">Berlin 1982</a>
       <a href="#feed">Découvertes</a>
     </nav>
   </div>
@@ -654,10 +660,31 @@ Tu connais le chemin de la maison.</div></div>
     </div>
   </section>
 
+  <!-- BERLIN 1982 — LE DÉCOR RÉEL -->
+  <section id="berlin82">
+    <div class="sec-head"><span class="n">09</span><h2>Berlin 1982 — saviez‑vous ?</h2><span class="mono">le décor réel</span></div>
+    <p class="lead">Les personnages de ces archives sont imaginaires. La ville, elle, était bien réelle — et plus étrange que la fiction.</p>
+    <div class="facts" style="margin-top:26px">
+      <div class="fact"><div class="k">Checkpoint Charlie</div><h3>Les papiers qu'on ne montrait jamais</h3><p>Un soldat allié en uniforme passait à l'Est sans présenter ses papiers aux gardes est‑allemands. Seul un officier soviétique pouvait les demander. S'ils étaient arrêtés, ils restaient dans la voiture, portes verrouillées, et attendaient — parfois des heures. C'est d'un refus de ce genre qu'est née, en octobre 1961, la nuit où des chars américains et soviétiques se sont fait face.</p></div>
+      <div class="fact"><div class="k">Uniforme obligatoire</div><h3>L'uniforme comme passeport</h3><p>En civil, un soldat devenait un simple touriste et devait se soumettre au contrôle est‑allemand — donc reconnaître l'autorité de la RDA. D'où la règle : à l'Est, uniquement en uniforme. Les familles des militaires, elles, collaient leur carte d'identité contre la vitre fermée : le garde la voyait, sans jamais la toucher.</p></div>
+      <div class="fact"><div class="k">Berlin‑Ouest</div><h3>Une ville sans armée allemande</h3><p>Le statut des quatre puissances interdisait toute armée allemande à Berlin. L'Ouest l'a respecté : pas de Bundeswehr, et les jeunes Berlinois de l'Ouest étaient dispensés de service militaire. Des milliers de jeunes s'y installaient pour y échapper — artistes, étudiants, musiciens. L'Est, lui, faisait défiler ses troupes sur la Karl‑Marx‑Allee… et les Alliés protestaient, chaque fois.</p></div>
+      <div class="fact"><div class="k">Patrouilles croisées</div><h3>Les Américains à l'Est, les Soviétiques à l'Ouest</h3><p>Chaque jour, des voitures militaires américaines, britanniques et françaises sillonnaient Berlin‑Est — suivies par la Stasi. Et des patrouilles soviétiques roulaient dans Berlin‑Ouest. La ville restait, sur le papier, celle des quatre. Mais personne n'entrait dans les casernes de l'autre sans invitation.</p></div>
+      <div class="fact"><div class="k">Tiergarten</div><h3>Des sentinelles soviétiques en plein Berlin‑Ouest</h3><p>Le mémorial soviétique du Tiergarten, à deux pas du Reichstag, se trouvait dans le secteur britannique. Il était pourtant gardé jour et nuit par des soldats de l'Armée rouge, relevés sous escorte britannique. Les promeneurs de l'Ouest les photographiaient comme une curiosité.</p></div>
+      <div class="fact"><div class="k">Kleistpark</div><h3>Le seul bureau où l'on travaillait ensemble</h3><p>Dans le secteur américain, le Centre de sécurité aérienne des quatre puissances surveillait les couloirs aériens vers Berlin. Des officiers soviétiques y travaillaient chaque jour, côte à côte avec les Américains, les Britanniques et les Français — pendant toute la guerre froide.</p></div>
+      <div class="fact"><div class="k">Spandau</div><h3>Un prisonnier, quatre armées</h3><p>Dans la prison de Spandau, un seul détenu : Rudolf Hess. Les quatre puissances le gardaient à tour de rôle, un mois chacune. Les soldats soviétiques venaient donc régulièrement monter la garde… à l'Ouest. On dit que les relèves étaient l'occasion d'échanger, discrètement, des insignes.</p></div>
+      <div class="fact"><div class="k">Deux minutes</div><h3>L'amitié sous surveillance</h3><p>Un officier soviétique et un officier américain pouvaient se saluer, échanger quelques mots, un insigne, une cigarette. Mais chaque contact devait être signalé, de part et d'autre. Les patrouilles soviétiques n'étaient jamais d'un seul homme : on se surveillait entre soi. Une conversation trop longue devenait un dossier.</p></div>
+      <div class="fact"><div class="k">Passer à l'Est</div><h3>Vingt‑cinq marks pour une journée</h3><p>Un touriste occidental qui voulait visiter Berlin‑Est devait prendre un visa d'un jour et changer obligatoirement 25 marks de l'Ouest en marks de l'Est, au taux d'un pour un — bien au‑dessus de leur valeur réelle. Et rentrer avant minuit.</p></div>
+      <div class="fact"><div class="k">Les Français de Berlin</div><h3>Une petite France au nord de la ville</h3><p>Environ 2 700 militaires français tenaient le secteur nord, autour du Quartier Napoléon et de l'aéroport de Tegel. Avec leurs familles, leurs écoles, leurs magasins — et leur cinéma, l'Aiglon. À quelques kilomètres du Mur, on y vivait presque comme en province.</p></div>
+      <div class="fact"><div class="k">La police chantait</div><h3>Le chœur de la police de Berlin</h3><p>Faute d'armée allemande, la seule troupe allemande en uniforme à Berlin‑Ouest était la police. Elle avait son orchestre… et son chœur d'hommes, fondé en 1957. Des voix graves, des cuivres, des chansons de toujours. Retenez ce détail.</p></div>
+    </div>
+  </section>
+
   <!-- DECOUVERTES -->
   <section id="feed">
-    <div class="sec-head"><span class="n">09</span><h2>Dernières découvertes</h2><span class="mono">mis à jour en continu</span></div>
+    <div class="sec-head"><span class="n">10</span><h2>Dernières découvertes</h2><span class="mono">mis à jour en continu</span></div>
     <div class="feed">
+      <div class="post"><div class="when">07 · 10 · 2026<small>nouvelle rubrique</small></div>
+        <div><h3>Berlin 1982, le décor réel</h3><p>Des papiers qu'on ne montrait jamais, des sentinelles soviétiques en plein Berlin‑Ouest, un seul bureau où l'Est et l'Ouest travaillaient ensemble… Une nouvelle rubrique rassemble ce que les archives disent de la ville où Sophie a chanté. Et elle cache un indice sur la suite. <a href="#berlin82">Lire →</a></p><p class="sig">— Le Gardien de la Lumière</p></div></div>
       <div class="post"><div class="when">06 · 10 · 2026<small>restauration</small></div>
         <div><h3>Deux chansons restaurées</h3><p>Les deux bandes ont été restaurées : la dédicace de Sergueï Valkov, à Moscou, et la réponse du chœur de l'US Army, à McNair Barracks — images plus nettes, son d'origine. D'un côté la pompe d'une grande salle dorée, de l'autre une salle de caserne, des chaises pliantes et des familles. Deux systèmes, deux destins — mais ce sont les hommes qui font la différence. Et regardez bien la dernière phrase du capitaine Holloway… <a href="#dedicace">Moscou →</a> · <a href="#reponse-ouest">Berlin‑Ouest →</a></p><p class="sig">— Le Gardien de la Lumière</p></div></div>
       <div class="post"><div class="when">03 · 10 · 2026<small>enregistrement</small></div>
